@@ -1,0 +1,44 @@
+<%- include("./partials/header.ejs") -%>
+    
+    <h1>Todo App!</h1>
+    <!-- As a link -->
+
+    <nav class="navbar bg-light">
+    
+      <div class="container-fluid">
+
+        <a class="navbar-brand" href="/">Get Up and Work</a>
+        <a href="/about"><h1> About </h1></a>
+    
+      </div>
+    
+    </nav>
+  
+    <div class="container" >
+  
+      <form action="/add/work" method="POST" class="d-flex">
+  
+        <input type="text" name="work" id="work" class="form-control" placeholder="Enter todo">
+  
+        <input type="submit" value="Add work to do " class="btn btn-sm btn-primary mx-2">
+  
+      </form>
+  
+      <ul class="list-group my-5">
+        <h2>All Works to do</h2>
+        <% if(allworks.length===0){ %>
+          <li class="content text "></li>
+            <p>There are no works to display...Please add some.</p>
+        <%}%>   
+      <% for(work of allworks){ %>
+
+        <li class="list-group-item"><%= work.work %><a href="/delete/work/<%= work._id %>" class="btn btn-danger btn-sm mx-2"> Delete </a></li>
+
+      <%}%>
+
+  
+      </ul>
+  
+    </div>
+    
+<%- include("./partials/footer.ejs") -%>
