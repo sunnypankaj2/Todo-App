@@ -1,5 +1,5 @@
 1. This is a Todo App.
-2. To Run this Download the Zip file and extract it wherever you want it.
+2. To Run this, Download the Zip file and extract it wherever you want it.
 3. Open terminal and go to the directory where it is extracted.
 4. Run "npm install" to install the dependecies( make sure to install node.js and nvm (node version manager) before runit it since it is a node.js project).
 5. Run "node app.js" on terminal to start the app.
